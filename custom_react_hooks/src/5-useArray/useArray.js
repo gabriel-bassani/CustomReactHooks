@@ -1,3 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 
-export default function useArray(callback, dependencies) {}
+export default function useArray(defaultValue) {
+  const [array, setArray] = useState(defaultValue);
+}
