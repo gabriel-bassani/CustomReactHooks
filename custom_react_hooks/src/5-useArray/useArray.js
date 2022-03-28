@@ -18,4 +18,17 @@ export default function useArray(defaultValue) {
       ...a.slice(index + 1, a.length - 1),
     ]);
   }
+
+  function remove(index) {
+    setArray((a) => [
+      ...a.slice(0, index),
+      ...a.slice(index + 1, a.length - 1),
+    ]);
+  }
+
+  function clear() {
+    setArray([]);
+  }
+
+  return { array, set: setArray, push, filter, update, remove, clear };
 }
